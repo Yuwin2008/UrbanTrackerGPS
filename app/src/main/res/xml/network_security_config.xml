@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+        Android blocks plain HTTP (cleartext) traffic by default for apps
+        targeting API 28+. This allows it ONLY for local/private network use.
+        If your server ever gets a real domain + TLS cert, switch to https://
+        and you can remove this file entirely.
+    -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.200.195.29</domain>
+        <!-- Add other local server IPs/hostnames here as needed -->
+    </domain-config>
+</network-security-config>
